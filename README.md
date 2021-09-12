@@ -19,3 +19,6 @@
 
 -  [**A섹션: Theory-Based Data Analysis**](https://github.com/hxk271/LinearRegression/blob/main/Beamer______W2A.pdf)
 -  [**B섹션: Introductory Stata (II)**](https://github.com/hxk271/LinearRegression/blob/main/Beamer______W2B.pdf)
+
+-  [퀴즈 #1](https://github.com/hxk271/LinearRegression/blob/main/HW_W2.docx)
+
