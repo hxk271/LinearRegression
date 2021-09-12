@@ -9,5 +9,13 @@
 
 ## 제1주차
 
--  [**A섹션(Course Introduction)**](https://github.com/hxk271/LinearRegression/blob/main/Beamer______W1A.pdf)
--  [**B섹션(Review)**](https://github.com/hxk271/LinearRegression/blob/main/Beamer______W1B.pdf)
+-  [**A섹션: Course Introduction**](https://github.com/hxk271/LinearRegression/blob/main/Beamer______W1A.pdf)
+-  [**B섹션: Review/Introductory Stata (I)**](https://github.com/hxk271/LinearRegression/blob/main/Beamer______W1B.pdf)
+
+
+<br/>
+
+## 제2주차
+
+-  [**A섹션: Theory-Based Data Analysis**](https://github.com/hxk271/LinearRegression/blob/main/Beamer______W2A.pdf)
+-  [**B섹션: Introductory Stata (II)**](https://github.com/hxk271/LinearRegression/blob/main/Beamer______W2B.pdf)
