@@ -1,3 +1,7 @@
+<p align="center">
+  <img src="https://github.com/hxk271/IntMedStats/blob/main/sb1.jpg">
+</p>
+
 # 계량분석(충북대학교 대학원 사회학과 2021년 2학기)
 
 
