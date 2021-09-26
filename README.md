@@ -22,7 +22,7 @@
 
 ## 제2주차(Theory-Based Data Analysis)
 
--  [**A섹션: Theory-Based Data Analysis**](https://github.com/hxk271/LinearRegression/blob/main/Beamer______W2A.pdf)
+-  [**AB섹션: Theory-Based Data Analysis**](https://github.com/hxk271/LinearRegression/blob/main/Beamer______W2A.pdf)
 -  [Stata 코드](https://github.com/hxk271/LinearRegression/blob/main/Beamer______W2.do)
 -  [퀴즈 #1](https://github.com/hxk271/LinearRegression/blob/main/HW_W2.docx)
 
@@ -31,6 +31,6 @@
 
 ## 제3주차(Examining Data)
 
--  [**A섹션: Examing Data**](https://github.com/hxk271/LinearRegression/blob/main/Beamer______W3A.pdf)
+-  [**AB섹션: Examing Data**](https://github.com/hxk271/LinearRegression/blob/main/Beamer______W3A.pdf)
 -  [Stata 코드](https://github.com/hxk271/LinearRegression/blob/main/Beamer______W3.do)
 -  [퀴즈 #2](https://github.com/hxk271/LinearRegression/blob/main/HW_W3.docx)
