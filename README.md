@@ -11,18 +11,26 @@
 
 <br/>
 
-## 제1주차
+## 제1주차(Course Introduction/Review)
 
 -  [**A섹션: Course Introduction**](https://github.com/hxk271/LinearRegression/blob/main/Beamer______W1A.pdf)
--  [**B섹션: Review/Introductory Stata (I)**](https://github.com/hxk271/LinearRegression/blob/main/Beamer______W1B.pdf)
+-  [**B섹션: Review**](https://github.com/hxk271/LinearRegression/blob/main/Beamer______W1B.pdf)
+-  [Stata 코드](https://github.com/hxk271/LinearRegression/blob/main/Beamer______W1.do)
 
 
 <br/>
 
-## 제2주차
+## 제2주차(Theory-Based Data Analysis)
 
 -  [**A섹션: Theory-Based Data Analysis**](https://github.com/hxk271/LinearRegression/blob/main/Beamer______W2A.pdf)
--  [**B섹션: Introductory Stata (II)**](https://github.com/hxk271/LinearRegression/blob/main/Beamer______W2B.do)
-
+-  [Stata 코드](https://github.com/hxk271/LinearRegression/blob/main/Beamer______W2.do)
 -  [퀴즈 #1](https://github.com/hxk271/LinearRegression/blob/main/HW_W2.docx)
 
+
+<br/>
+
+## 제3주차(Examining Data)
+
+-  [**A섹션: Examing Data**](https://github.com/hxk271/LinearRegression/blob/main/Beamer______W3A.pdf)
+-  [Stata 코드](https://github.com/hxk271/LinearRegression/blob/main/Beamer______W3.do)
+-  [퀴즈 #2](https://github.com/hxk271/LinearRegression/blob/main/HW_W3.docx)
