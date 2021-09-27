@@ -1,13 +1,22 @@
-*Descriptive Statistics Practice I
+*Importing external data files
 
 	*importing CSV (comma-separated values) data file
-	import delimited using "sociology.csv", clear rowrange(4)
-	save "sociology.dta", replace
+	import delimited using "data/sociology.csv", clear rowrange(4)
+	save "data/sociology.dta", replace
 
-	*importing SPSS data file
-	import spss using "2003-2018_KGSS_public_v3.sav", clear
-	save "2003-2018_KGSS_public_v3.dta", replace
-
+	/*importing SPSS data file (if it works in your Stata)
+	import spss using "data/2003-2018_KGSS_public_v3.sav", clear
+	save "data/2003-2018_KGSS_public_v3.dta", replace
+	*/
+	
+	
+	
+	
+*Finding variables
+	
+	*KGSS data
+	use "data/2003-2018_KGSS_public_v3.dta", replace
+	
 	*hunting for variables of interest
 	describe
 	describe HAP*
@@ -15,59 +24,72 @@
 	describe *HAP*
 	lookfor 행복
 
-	*investigate and recode the variable of interest
-	tab HAPPY
-	tab HAPPY, nolabel
-	recode HAPPY (4=1) (3=2) (2=3) (1=4) (-8=.), gen(happiness)
-	tab HAPPY happiness
-
-	*select a sub-sample
-	tab YEAR
-	keep if YEAR==2018
-	keep MARITAL happiness
-
-	*summarize a variable by another variable
-	by MARITAL, sort: summarize happiness
-	bysort MARITAL: summarize happiness
-
-	generate date = date(v1, "YM")
-	format date %td
-
-
-
-
-*Descriptive Statistics Practice II
-
-	*re-load Stata file
-	use "2003-2018_KGSS_public_v3.dta", clear
-
-	*select a sub-sample, once again
-	keep if YEAR==2018
-	recode HAPPY (4=1) (3=2) (2=3) (1=4) (-8=.), gen(happiness)
-	lookfor 성별
-	tab SEX
-	tab SEX, nolabel miss
-	keep MARITAL SEX happiness
-
-	*summarize a variable by another variable
-	bysort MARITAL: summarize happiness if SEX==1   //male
-	bysort MARITAL: summarize happiness if SEX==2   //female
-
 	*rename variables
 	rename MARITAL marital
 	rename *, lower
 
-	*Repeat the above procedure but with a different variable.
+
+	
+	
+	
+*Select a sub-sample
+
+	tab year
+	keep if year==2018
+	keep happy marital sex
+	order marital sex happy
+	
+	
+	
+	
+	
+*Tabulation and recoding
+	
+	*tabulate the variable of interest
+	tab happy
+	tab happy, nolabel
+	
+	*recode the variable of interest (I)
+	gen happy2=.
+	replace happy2=1 if happy==4
+	replace happy2=2 if happy==3
+	replace happy2=3 if happy==2
+	replace happy2=4 if happy==1
+	tab happy happy2
+	
+	*recode the variable of interest (II)
+	recode happy (4=1) (3=2) (2=3) (1=4) (-8=.), gen(happiness)
+	tab happy happiness
+
+	
+	
+	
+	
+*Descriptive statistics (I)
+
+	*summarize
+	summarize happiness
+	summarize happiness, detail
+	
+	*summarize a variable by another variable
+	bysort marital: summarize happiness
+
+	*summarize a variable by another variable, with "if"
+	bysort marital: summarize happiness if sex==1   //male
+	bysort marital: summarize happiness if sex==2   //female
 
 
 
-*Descriptive Statistics Practice III
+	
+	
+	
+	
+	
+*Descriptive statistics (II)
 
 	*create a new variable
 	tab marital
 	tab marital, nolabel
-	numlabel, add       //will take time for a reason
-	tab marital
 	generate together=marital==1|marital==6
 	replace together=. if marital==-8
 
@@ -77,7 +99,6 @@
 	label variable together "같이 혹은 따로"
 	tab marital together
 	tab marital together, miss
-
 
 	*summarize a variable by another variable
 	bysort together: summarize happiness
