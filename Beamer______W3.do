@@ -41,7 +41,7 @@
 	
 	recode q4_n2 (5=1) (4=2) (3=3) (2=4) (1=5), generate(q4_n2r)
 	
-	gen q4_n3r=6-q4_n2
+	gen q4_n3r=6-q4_n3
 	
 	*composite variable
 	gen fdrp=q4r+q4_n2r+q4_n3r
@@ -63,7 +63,7 @@
 
 	*descriptive statistics
 	describe        //check how many variables and observations are in the data
-	summarize q4 q4_n2 q4_n3
+	summarize Q154 Q155
 
 	*first and second choices
 	tab Q154, miss
@@ -85,6 +85,10 @@
 	*check with the pre-existing variable
 	tab pmv Y002, miss
 
+	*survey weights (https://www.worldvaluessurvey.org/WVSContents.jsp?CMSID=WEIGHT&CMSID=WEIGHT)
+	lookfor weight
+	tab pwght
+	
 	*save as new file
 	save "data/wvs_pmv", replace
 		
