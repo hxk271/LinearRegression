@@ -36,3 +36,13 @@
 -  [**B섹션: Examining Various Datasets**](https://github.com/hxk271/LinearRegression/blob/main/Beamer______W3B.pdf)
 -  [Stata 코드](https://github.com/hxk271/LinearRegression/blob/main/Beamer______W3.do)
 -  [퀴즈 #2](https://github.com/hxk271/LinearRegression/blob/main/HW_W3.docx)
+
+
+<br/>
+
+## 제4주차(Cross-Tabulations and Tables)
+
+-  [**A섹션: Two-Way Cross-Tabulations**](https://github.com/hxk271/LinearRegression/blob/main/Beamer______W4A.pdf)
+-  [**B섹션: Three-Way Cross-Tabulations and Tables**](https://github.com/hxk271/LinearRegression/blob/main/Beamer______W4B.pdf)
+-  [Stata 코드](https://github.com/hxk271/LinearRegression/blob/main/Beamer______W4.do)
+-  [퀴즈 #3](https://github.com/hxk271/LinearRegression/blob/main/HW_W4.docx)
