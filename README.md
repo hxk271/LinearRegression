@@ -46,3 +46,14 @@
 -  [**B섹션: Three-Way Cross-Tabulations and Tables**](https://github.com/hxk271/LinearRegression/blob/main/Beamer______W4B.pdf)
 -  [Stata 코드](https://github.com/hxk271/LinearRegression/blob/main/Beamer______W4.do)
 -  [퀴즈 #3](https://github.com/hxk271/LinearRegression/blob/main/HW_W4.docx)
+
+
+<br/>
+
+## 제5주차(Cross-Tabulations and Tables)
+
+-  [**Statistical Inference Revisited**](https://github.com/hxk271/LinearRegression/blob/main/Beamer______W5A1.pdf)
+-  [**A섹션: Comparing Means/Proportions**](https://github.com/hxk271/LinearRegression/blob/main/Beamer______W5A2.pdf)
+-  [**B섹션: Comparing Variances**](https://github.com/hxk271/LinearRegression/blob/main/Beamer______W5B.pdf)
+-  [Stata 코드](https://github.com/hxk271/LinearRegression/blob/main/Beamer______W5.do)
+-  [퀴즈 #4](https://github.com/hxk271/LinearRegression/blob/main/HW_W5.docx)
