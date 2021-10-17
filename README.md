@@ -50,7 +50,7 @@
 
 <br/>
 
-## 제5주차(Cross-Tabulations and Tables)
+## 제5주차(Means/Proportions Comparison and ANOVA)
 
 -  [**Statistical Inference Revisited**](https://github.com/hxk271/LinearRegression/blob/main/Beamer______W5A1.pdf)
 -  [**A섹션: Comparing Means/Proportions**](https://github.com/hxk271/LinearRegression/blob/main/Beamer______W5A2.pdf)
