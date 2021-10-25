@@ -56,3 +56,13 @@
 -  [**B섹션: Comparing Variances**](https://github.com/hxk271/LinearRegression/blob/main/Beamer______W5B.pdf)
 -  [Stata 코드](https://github.com/hxk271/LinearRegression/blob/main/Beamer______W5.do)
 -  [퀴즈 #4](https://github.com/hxk271/LinearRegression/blob/main/HW_W5.docx)
+
+
+<br/>
+
+## 제6주차(Means/Proportions Comparison and ANOVA)
+
+-  [**A섹션: 상관분석**](https://github.com/hxk271/LinearRegression/blob/main/Beamer______W6A.pdf)
+-  [**B섹션: 이변량 단순최소자승**](https://github.com/hxk271/LinearRegression/blob/main/Beamer______W6B.pdf)
+-  [Stata 코드](https://github.com/hxk271/LinearRegression/blob/main/Beamer______W6.do)
+
