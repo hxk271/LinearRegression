@@ -62,7 +62,7 @@
 
 ## 제6주차(Means/Proportions Comparison and ANOVA)
 
--  [**A섹션: 상관분석**](https://github.com/hxk271/LinearRegression/blob/main/Beamer______W6A.pdf)
--  [**B섹션: 이변량 단순최소자승**](https://github.com/hxk271/LinearRegression/blob/main/Beamer______W6B.pdf)
--  [Stata 코드](https://github.com/hxk271/LinearRegression/blob/main/Beamer______W6.do)
+-  [**A섹션: 상관분석**](https://github.com/hxk271/LinearRegression/blob/main/Beamer______W06A.pdf)
+-  [**B섹션: 이변량 단순최소자승**](https://github.com/hxk271/LinearRegression/blob/main/Beamer______W06B.pdf)
+-  [Stata 코드](https://github.com/hxk271/LinearRegression/blob/main/Beamer______W06.do)
 
