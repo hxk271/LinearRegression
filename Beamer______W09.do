@@ -105,7 +105,7 @@
 
 	*regression with an interaction term (numerical x numerical)
 	gen ttl_expXage=ttl_exp*age
-	reg ln_wage ttl_exp age ttl_expxage
+	reg ln_wage ttl_exp age ttl_expXage
 	reg ln_wage ttl_exp age c.ttl_exp#c.age
 	reg ln_wage c.ttl_exp##c.age
 	
