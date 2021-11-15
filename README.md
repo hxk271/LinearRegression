@@ -83,4 +83,5 @@
 -  [**A섹션: Dummy Variables**](https://github.com/hxk271/LinearRegression/blob/main/Beamer______W09A.pdf)
 -  [**B섹션: Moderating Variables and Interaction Terms**](https://github.com/hxk271/LinearRegression/blob/main/Beamer______W09B.pdf)
 -  [Stata 코드](https://github.com/hxk271/LinearRegression/blob/main/Beamer______W09.do)
+-  [퀴즈 #5](https://github.com/hxk271/LinearRegression/blob/main/HW_W9.docx)
 
