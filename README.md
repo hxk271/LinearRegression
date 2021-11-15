@@ -75,3 +75,12 @@
 -  [**B섹션: 다변량 회귀분석 (II)**](https://github.com/hxk271/LinearRegression/blob/main/Beamer______W07B.pdf)
 -  [Stata 코드](https://github.com/hxk271/LinearRegression/blob/main/Beamer______W07.do)
 
+
+<br/>
+
+## 제9주차(Dummy Variables and Conditional Relationships)
+
+-  [**A섹션: Dummy Variables**](https://github.com/hxk271/LinearRegression/blob/main/Beamer______W09A.pdf)
+-  [**B섹션: Moderating Variables and Interaction Terms**](https://github.com/hxk271/LinearRegression/blob/main/Beamer______W09B.pdf)
+-  [Stata 코드](https://github.com/hxk271/LinearRegression/blob/main/Beamer______W09.do)
+
