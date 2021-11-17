@@ -60,19 +60,19 @@
 
 <br/>
 
-## 제6주차(Correlations and OLS Regression)
+## 제6주차(Correlations and Simple Regression)
 
 -  [**A섹션: 상관분석**](https://github.com/hxk271/LinearRegression/blob/main/Beamer______W06A.pdf)
--  [**B섹션: 이변량 단순최소자승**](https://github.com/hxk271/LinearRegression/blob/main/Beamer______W06B.pdf)
+-  [**B섹션: 단순최소자승**](https://github.com/hxk271/LinearRegression/blob/main/Beamer______W06B.pdf)
 -  [Stata 코드](https://github.com/hxk271/LinearRegression/blob/main/Beamer______W06.do)
 
 
 <br/>
 
-## 제7주차(Multivariate OLS Regression)
+## 제7주차(Multiple Regression)
 
--  [**A섹션: 다변량 회귀분석 (I)**](https://github.com/hxk271/LinearRegression/blob/main/Beamer______W07A.pdf)
--  [**B섹션: 다변량 회귀분석 (II)**](https://github.com/hxk271/LinearRegression/blob/main/Beamer______W07B.pdf)
+-  [**A섹션: 다중회귀분석 (I)**](https://github.com/hxk271/LinearRegression/blob/main/Beamer______W07A.pdf)
+-  [**B섹션: 다중회귀분석 (II)**](https://github.com/hxk271/LinearRegression/blob/main/Beamer______W07B.pdf)
 -  [Stata 코드](https://github.com/hxk271/LinearRegression/blob/main/Beamer______W07.do)
 
 
