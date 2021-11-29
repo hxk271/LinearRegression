@@ -93,5 +93,5 @@
 -  [**A섹션: Quadratic Function and Fractional Polynomials**](https://github.com/hxk271/LinearRegression/blob/main/Beamer______W10A.pdf)
 -  [**B섹션: Variable Transformation**](https://github.com/hxk271/LinearRegression/blob/main/Beamer______W10B.pdf)
 -  [Stata 코드](https://github.com/hxk271/LinearRegression/blob/main/Beamer______W10.do)
--  [퀴즈 #6](https://github.com/hxk271/LinearRegression/blob/main/HW_W10.docx)
+-  [퀴즈 #6](https://github.com/hxk271/LinearRegression/blob/main/HW_W10.zip)
 
