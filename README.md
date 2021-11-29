@@ -85,3 +85,13 @@
 -  [Stata 코드](https://github.com/hxk271/LinearRegression/blob/main/Beamer______W09.do)
 -  [퀴즈 #5](https://github.com/hxk271/LinearRegression/blob/main/HW_W09.docx)
 
+
+<br/>
+
+## 제10주차(Non-linear Tests and Variable Transformations)
+
+-  [**A섹션: Quadratic Function and Fractional Polynomials**](https://github.com/hxk271/LinearRegression/blob/main/Beamer______W10A.pdf)
+-  [**B섹션: Variable Transformation**](https://github.com/hxk271/LinearRegression/blob/main/Beamer______W10B.pdf)
+-  [Stata 코드](https://github.com/hxk271/LinearRegression/blob/main/Beamer______W10.do)
+-  [퀴즈 #6](https://github.com/hxk271/LinearRegression/blob/main/HW_W10.docx)
+
