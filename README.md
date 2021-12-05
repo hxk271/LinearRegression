@@ -95,3 +95,13 @@
 -  [Stata 코드](https://github.com/hxk271/LinearRegression/blob/main/Beamer______W10.do)
 -  [퀴즈 #6](https://github.com/hxk271/LinearRegression/blob/main/HW_W10.zip)
 
+
+<br/>
+
+## 제11주차(Regression Diagnostics)
+
+-  [**A섹션: OLS Assumptions (I)**](https://github.com/hxk271/LinearRegression/blob/main/Beamer______W11A.pdf)
+-  [**B섹션: OLS Assumptions (II)**](https://github.com/hxk271/LinearRegression/blob/main/Beamer______W11B.pdf)
+-  [Stata 코드](https://github.com/hxk271/LinearRegression/blob/main/Beamer______W11.do)
+
+
