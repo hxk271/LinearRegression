@@ -1,167 +1,170 @@
-*principal component analysis (1)
+*linearity
 
-	*Scores by Roger de Piles for Renaissance painters
-	use "renpainters", clear
+	*transit data
+	import delimited "data/transit.csv", clear
+	graph twoway (scatter rider map) (lfit rider map) (qfit rider map)
 
-	*single princpal component
-	graph twoway (scatter composition expression) (lfit composition expression)
-	factor composition expression, pcf
-	di 0.9529^2 + 0.9529^2           //eigenvalue
-	predict pc
-	di 0.9529/1.81611   			 //regression-based scoring
-	pwcorr pc composition expression
+	*scatterplot residues against y hat
+	reg rider map
+	predict res, residual
+	predict yhat, xb
+	graph twoway (scatter res yhat) (lfit res yhat) (qfit res yhat)
+	rvfplot         //residual-vs-fitted plot
 
-	*two princpal components
-	factor composition drawing colour expression, pcf
-	di 0.7804^2 + 0.8396^2 + (-0.6242)^2 + 0.8857^2   //eigenvalue
-	di 2.48792/(2.48792+1.06280+0.31537+0.13391)      //contribution
-	di 1-(0.7804^2 + 0.5419^2)						  //communality and uniqueness
-	predict pc1 pc2
-	di 0.7804/2.48792   //regression-based scoring
-	pwcorr pc1 composition drawing colour expression
-	graph twoway (scatter pc2 pc1, mlabel(painter))
+	*matrix scatterplot
+	use "data/ATTEND.DTA", clear
+	graph matrix termgpa priGPA ACT final atndrte hwrte, half
+	reg termgpa priGPA ACT final atndrte hwrte
+	predict res, res
+	predict yhat, xb
+	rvfplot
+	
+	
+	
+	
+*full rank: n>k+2
+
+	*n<=k+2 (4<=2+2)
+	clear
+	input y x1 x2 
+		1 2 3
+		2 5 6
+		3 8 7
+		4 11 12
+		end
+	reg y x1 x2
+	
+	*n>k+2 (5>2+2)
+	clear
+	input y x1 x2 
+		1 2 3
+		2 5 6
+		3 8 8
+		4 11 12
+		7 14 15
+		end
+	reg y x1 x2
+	
+	*perfect collinearity
+	gen x3=x2				    //x3 is identical to x2
+	reg y x1 x2 x3
+	gen x4=0.5+(1.5*x2)         //x4 is a linear combination of x2
+	reg y x1 x2 x4
+
+	*eyeballing for multicollinearity
+	webuse "bodyfat", clear
+	corr triceps thigh midarm bodyfat
+	est clear
+	eststo: reg bodyfat tricep
+	eststo: reg bodyfat        thigh
+	eststo: reg bodyfat              midarm
+	eststo: reg bodyfat tricep thigh
+	eststo: reg bodyfat        thigh midarm
+	eststo: reg bodyfat tricep       midarm
+	eststo: reg bodyfat tricep thigh midarm
+	esttab, r2
+
+	*variance inflation factors
+	reg bodyfat tricep thigh midarm
+	vif
+	reg tricep thigh midarm
+	ereturn list
+	scalar tolerance=1-e(r2)     //tricep's tolerance
+	di 1/tolerance               //tricep's vif
+
 
 	
+	
+	
+*outlier detection
+	
+	*regress systolic blood pressure on covariates
+	webuse "nhanes2", clear
+	est clear
+	eststo: reg bpsystol age sex i.race bmi
 
-			   
+	*(1) studentized residuals
+	predict rstudent, rstudent
+	histogram rstudent
+	eststo: reg bpsystol age sex i.race bmi if abs(rstudent)<5
+	
+	*(2) cook's distance
+	predict cook, cooksd
+	histogram cook
+	su
+	return list
+	eststo: reg bpsystol age sex i.race bmi if cook<4/`r(N)'
+	esttab, r2
 
-*principal component analysis (2)
+	*visualization
+	lvr2plot
+	
+	
+	
+	
+	
+	
+	
+*zero conditional mean
 
-	import delimited using "../data/Y1_STD_EDU.csv", clear
-	
-	*recoding Xs
-	foreach i of varlist y1s3_*  {
-		replace `i'=. if `i'<0
-		}
-		
-	*pca
-	factor y1s3_*, pcf
- 
-	*extracting the principal components
-	screeplot, yline(1)
+	*transit data
+	import delimited "data/transit.csv", clear
+	reg rider map
+	predict res, residual
+	graph twoway (scatter res map) (lfit res map) (qfit res map)
 
+	*simulated data
+	clear
+	set obs 100
+	set seed 1234
+	gen x1=runiform()*10
+	gen u=rnormal(0,10)
+	gen y=1.5*x1 - 2.5*(x1^2) + u
 	
-		
-		
+	*misspecified model
+	reg y x1
+	predict res1, res
+	graph twoway (scatter res1 x1) (lfit res1 x1)
 	
-*rotation
-
-	*Scores by Roger de Piles for Renaissance painters
-	use "renpainters", clear
-
-	*orthogonal rotation
-	factor composition drawing colour expression, pcf
-	rotate
-	rotate, blank(.4)
-	predict pc1o pc2o
-	pwcorr pc1o pc2o
-	
-	*oblique rotation
-	factor composition drawing colour expression, pcf
-	rotate, promax(3) blank(.4)
-	predict pc1p pc2p
-	pwcorr pc1p pc2p
-	
-	
-	
+	*correctly specified model
+	reg y c.x1##c.x1
+	predict res2, res
+	graph twoway (scatter res2 x1) (lfit res2 x1)
 	
 	
 
-*rotation and pc extraction
+	
+*homoscedasticity
 
-	import delimited using "../data/Y1_STD_EDU.csv", clear
-	
-	*recoding Xs
-	foreach i of varlist y1s3_*  {
-		replace `i'=. if `i'<0
-		}
-		
-	*pca 1
-	factor y1s3_*, pcf
-	rotate
-	rotate, blank(.4)
-	
-	*pca 2
-	drop y1s3_27
-	factor y1s3_*, pcf
-	rotate, blank(.4)
-	
-	*pca 3
-	drop y1s3_8
-	factor y1s3_*, pcf
-	rotate, blank(.4)
-	
-	*four principal components
-	predict pc1 pc2 pc3 pc4
+	*simulated data
+	clear
+	set obs 1000
+	set seed 1234
+	gen x1=runiform()*10
+	gen x2=runiform()*5*x1
+	gen u=rnormal(0,10)
+	gen y=1.5*x1 + 2.5*x2 + u
 
-	*recoding Ys
-	foreach i of varlist y1kor_s y1eng_s y1mat_s {
-		replace `i'=. if `i'<0
-		}
-	gen score=y1kor_s+y1eng_s+y1mat_s
-
-	*regress y on principal components
-	reg score pc1 pc2 pc3 pc4
-		
-		
-  
+	*heteroscedasticity
+	reg y x1
+	predict res1, res
+	graph twoway (scatter res1 x1) (lfit res1 x1)
+	estat hettest   //breusch-pagan test
 	
-		
-*pca post-estimation
+	*homoscedasticity
+	reg y x1 x2
+	predict res2, res
+	graph twoway (scatter res2 x1) (lfit res2 x1)
+	graph twoway (scatter res2 x2) (lfit res2 x2)
+	estat hettest   //breusch-pagan test
+
+	
+	
+	
+*normality
 
 	*
-	use "renpainters", clear
-	
-	*pca
-	factor composition drawing colour expression, pcf
-	
-	*post-estimation
-	pwcorr
-	//make sure "ssc install factortest"
-	factortest composition drawing colour expression
-	estat kmo
-	
-	
-	*
-	import delimited using "../data/Y1_STD_EDU.csv", clear
-	foreach i of varlist y1s3_*  {
-		replace `i'=. if `i'<0
-		}
-	drop y1s3_27 y1s3_8
-	factor y1s3_*, pcf
-	rotate, blank(.4)
-	predict pc1 pc2 pc3 pc4	
-	correl y1s3_*
-	factortest y1s3_*
-	estat kmo
-	
-		
-	
-	
-	
-	
-	
-	
-	
-		   
-*reliability
-		   
-	*cronbach's alpha
-	use "Data/Fear of Statistics", clear
-	alpha q01 q03 q04 q05 q12 q16 q20 q21
-	
-	*check if there are items to be deleted
-	alpha q01 q03 q04 q05 q12 q16 q20 q21, item
-
-	*normalization
-	foreach i of varlist q01 q03 q04 q05 q12 q16 q20 q21 {
-		qui su `i'
-		gen `i'_std=(`i'-r(mean))/r(sd)
-		}
-	alpha *_std
-
-	*alpha with normalized items
-	alpha q01 q03 q04 q05 q12 q16 q20 q21, std
-
-
-
+	webuse "nhanes2", clear
+	reg bpsystol age sex i.race bmi
+	predict res, res
+	pnorm res    //pp plot
