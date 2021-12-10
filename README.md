@@ -105,3 +105,13 @@
 -  [Stata 코드](https://github.com/hxk271/LinearRegression/blob/main/Beamer______W11.do)
 
 
+
+<br/>
+
+## 제12주차(Principal Component Analysis and Scale Construction)
+
+-  [**A섹션: Construct Validity and Principal Component Analysis**](https://github.com/hxk271/LinearRegression/blob/main/Beamer______W12A.pdf)
+-  [**B섹션: Internal Reliability and Cronbach's Alpha**](https://github.com/hxk271/LinearRegression/blob/main/Beamer______W12B.pdf)
+-  [Stata 코드](https://github.com/hxk271/LinearRegression/blob/main/Beamer______W12.do)
+
+
